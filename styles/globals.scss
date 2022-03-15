@@ -1,0 +1,152 @@
+html,
+body {
+  background-color: #eee;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+h2 {
+  text-align: center;
+}
+nav {
+  background-color: rgba(0, 0, 0, 0.7);
+
+  height: 60px;
+  width: 100%;
+  div {
+    display: flex;
+    div.item1 {
+      flex: 2;
+      a {
+        h1 {
+          color: whitesmoke;
+          text-transform: uppercase;
+          font-weight: 800;
+        }
+      }
+    }
+    div.item2 {
+      flex: 1;
+      display: flex;
+      align-items: center;
+
+      gap: 4px;
+      div {
+        flex: 1;
+        height: 40px;
+
+        a {
+          border-radius: 4px;
+          color: whitesmoke;
+
+          width: 70px;
+        }
+      }
+    }
+  }
+}
+$bg: rgba(0, 0, 0, 0.7);
+.search-bar {
+  margin-top: 10px;
+  width: 50%;
+  margin-inline: auto;
+
+  input {
+    width: 70%;
+    height: 40px;
+    outline-style: none;
+    caret-color: yellow;
+    font-weight: 400;
+    font-size: 15px;
+    border-radius: 5px;
+  }
+  button {
+    background-color: rgb(75, 72, 72);
+    width: 27%;
+    height: 40px;
+    border-style: none;
+    border-radius: 5px;
+    color: whitesmoke;
+    margin-left: 2px;
+    cursor: pointer;
+  }
+}
+.content {
+  min-height: 100vh;
+  max-width: auto;
+  div {
+    background-color: $bg;
+    display: inline-block;
+    width: 32%;
+    margin-left: 1%;
+    margin-block: 8px;
+    text-align: center;
+    color: rgb(196, 182, 182);
+    font-family: sans-serif;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    h3 {
+      color: white;
+    }
+
+    p {
+      span {
+        color: whitesmoke;
+        font-weight: 600;
+      }
+    }
+    a {
+      border: 2px white solid;
+      border-radius: 5px;
+      padding: 5px;
+      padding-inline: 30px;
+      &:hover,
+      &:active {
+        background-color: white;
+        color: black;
+      }
+      &:visited {
+        color: rgb(178, 245, 139);
+        opacity: 0.7;
+      }
+    }
+  }
+}
+.top {
+  h2 {
+    font-size: 16px;
+    color: #474747;
+  }
+  p {
+    color: $bg;
+    text-align: center;
+  }
+}
+.not-found {
+  text-align: center;
+  color: $bg;
+  font-weight: 600;
+}
+@media screen and (max-width: 850px) {
+  .content {
+    div {
+      width: 48%;
+    }
+  }
+  h1 {
+    font-size: 17px;
+  }
+  h2 {
+    font-size: 15px;
+  }
+}
